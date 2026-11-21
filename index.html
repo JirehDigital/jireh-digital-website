@@ -1,695 +1,659 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jireh Digital creates professional websites that help businesses build trust, attract customers and grow online.">
-  <meta name="theme-color" content="#101010">
-  <title>Jireh Digital | Websites That Help Businesses Grow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jireh Digital | Premium Website Design Agency for Growing Businesses</title>
+  <meta name="description" content="Jireh Digital is an international web design agency building modern, mobile-friendly websites, landing pages, e-commerce stores and booking systems that turn visitors into customers.">
+  <meta name="keywords" content="web design agency, website design, landing pages, e-commerce websites, online booking systems, website redesign, SEO, website maintenance, Jireh Digital">
+  <meta name="author" content="Jireh Digital">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#05070f">
+  <link rel="canonical" href="https://jireh-digital.netlify.app/">
 
-  <style>
-    :root {
-      --black: #101010;
-      --gold: #bd9850;
-      --gold-light: #e5ca8b;
-      --white: #ffffff;
-      --grey: #f5f5f3;
-      --text: #555;
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jireh Digital">
+  <meta property="og:title" content="Jireh Digital | We Build Websites That Turn Visitors Into Customers">
+  <meta property="og:description" content="Stunning websites, powerful digital experiences and professional web solutions for businesses worldwide.">
+  <meta property="og:url" content="https://jireh-digital.netlify.app/">
+  <meta property="og:image" content="https://jireh-digital.netlify.app/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jireh Digital logo — Web Design and Digital Growth">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jireh Digital | We Build Websites That Turn Visitors Into Customers">
+  <meta name="twitter:description" content="Stunning websites, powerful digital experiences and professional web solutions for businesses worldwide.">
+  <meta name="twitter:image" content="https://jireh-digital.netlify.app/assets/og-image.jpg">
+
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/favicon-180.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('is-loaded')},3500);</script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Jireh Digital",
+    "slogan": "We Build Websites That Turn Visitors Into Customers.",
+    "description": "International digital agency specialising in website design and digital development.",
+    "url": "https://jireh-digital.netlify.app/",
+    "logo": "https://jireh-digital.netlify.app/assets/logo.png",
+    "image": "https://jireh-digital.netlify.app/assets/og-image.jpg",
+    "telephone": "+27704416035",
+    "areaServed": "Worldwide",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+27704416035",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
     }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--black);
-      background: var(--white);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1120px, 90%);
-      margin: auto;
-    }
-
-    header {
-      background: rgba(255,255,255,.97);
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav {
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 23px;
-      border-radius: 5px;
-      background: var(--gold);
-      color: #111;
-      font-weight: 700;
-      transition: .2s;
-    }
-
-    .button:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-    }
-
-    .button.dark {
-      background: var(--black);
-      color: white;
-    }
-
-    .hero {
-      background:
-        radial-gradient(circle at 85% 20%, #3a3020 0, transparent 35%),
-        linear-gradient(120deg, #101010, #202020);
-      color: white;
-      padding: 105px 0;
-    }
-
-    .hero-content {
-      max-width: 760px;
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(40px, 7vw, 68px);
-      line-height: 1.08;
-      margin-bottom: 24px;
-    }
-
-    h1 span {
-      color: var(--gold-light);
-    }
-
-    .hero p {
-      color: #d2d2d2;
-      font-size: 18px;
-      max-width: 620px;
-      margin-bottom: 32px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .outline-button {
-      border: 1px solid #aaa;
-      color: white;
-      padding: 13px 22px;
-      border-radius: 5px;
-      font-weight: 700;
-    }
-
-    section {
-      padding: 85px 0;
-    }
-
-    .section-heading {
-      text-align: center;
-      max-width: 680px;
-      margin: 0 auto 45px;
-    }
-
-    .section-heading .eyebrow {
-      color: var(--gold);
-    }
-
-    h2 {
-      font-size: clamp(30px, 5vw, 43px);
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-
-    .section-heading p {
-      color: var(--text);
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      border: 1px solid #e9e9e9;
-      border-radius: 10px;
-      padding: 30px;
-      background: white;
-      transition: .25s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--gold);
-      box-shadow: 0 12px 30px #0000000c;
-    }
-
-    .service-icon {
-      width: 48px;
-      height: 48px;
-      display: grid;
-      place-items: center;
-      background: #f5efe3;
-      border-radius: 10px;
-      font-size: 23px;
-      margin-bottom: 20px;
-    }
-
-    .service-card h3 {
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .about {
-      background: var(--grey);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-copy p {
-      color: var(--text);
-      margin: 15px 0;
-    }
-
-    .benefits {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 25px;
-    }
-
-    .benefit {
-      background: white;
-      padding: 18px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .benefit span {
-      color: var(--gold);
-      margin-right: 7px;
-    }
-
-    .about-panel {
-      background: var(--black);
-      color: white;
-      border-radius: 12px;
-      padding: 42px;
-    }
-
-    .about-panel h3 {
-      color: var(--gold-light);
-      font-size: 25px;
-      margin-bottom: 15px;
-    }
-
-    .about-panel p {
-      color: #ccc;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .process-card {
-      padding: 25px;
-      border-left: 3px solid var(--gold);
-      background: #fafafa;
-    }
-
-    .step {
-      color: var(--gold);
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .process-card h3 {
-      margin-bottom: 8px;
-    }
-
-    .process-card p {
-      color: var(--text);
-      font-size: 14px;
-    }
-
-    .cta {
-      background: linear-gradient(120deg, #171717, #29251d);
-      color: white;
-      text-align: center;
-    }
-
-    .cta p {
-      color: #ccc;
-      max-width: 600px;
-      margin: 0 auto 28px;
-    }
-
-    .faq-list {
-      max-width: 780px;
-      margin: auto;
-    }
-
-    details {
-      border-bottom: 1px solid #e5e5e5;
-      padding: 20px 5px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 17px;
-    }
-
-    details p {
-      color: var(--text);
-      padding-top: 12px;
-    }
-
-    footer {
-      background: #101010;
-      color: white;
-      padding: 45px 0 20px;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 25px;
-      padding-bottom: 30px;
-    }
-
-    footer p {
-      color: #bbb;
-      font-size: 14px;
-      margin-top: 10px;
-    }
-
-    footer a:hover {
-      color: var(--gold-light);
-    }
-
-    .copyright {
-      border-top: 1px solid #333;
-      padding-top: 20px;
-      text-align: center;
-      color: #aaa;
-      font-size: 12px;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 99;
-      background: #25d366;
-      color: white;
-      padding: 14px 19px;
-      border-radius: 50px;
-      font-weight: 700;
-      box-shadow: 0 5px 20px #0003;
-    }
-
-    @media (max-width: 760px) {
-      .nav-links {
-        gap: 12px;
-        font-size: 12px;
-      }
-
-      .nav-links .nav-contact {
-        display: none;
-      }
-
-      .hero {
-        padding: 75px 0;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-
-      .services-grid,
-      .process-grid,
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-grid {
-        gap: 30px;
-      }
-
-      .benefits {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 400px) {
-      .logo {
-        font-size: 18px;
-      }
-
-      .nav-links {
-        gap: 9px;
-      }
-
-      .benefits {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  }
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="#home">JIREH <span>DIGITAL.</span></a>
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a class="nav-contact" href="#contact">Contact</a>
+  <!-- Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__ring"></div>
+    <img src="assets/favicon-192.png" alt="" width="64" height="64">
+  </div>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Jireh Digital home">
+        <img src="assets/favicon-192.png" alt="" width="40" height="40" class="brand__mark">
+        <span class="brand__text">JIREH <span class="text-gold">DIGITAL</span></span>
+      </a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#work" class="nav__link">Our Work</a></li>
+        <li><a href="#process" class="nav__link">Process</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+        <li class="nav__mobile-cta">
+          <a href="https://wa.me/27704416035" target="_blank" rel="noopener" class="btn btn--whatsapp btn--block">
+            <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Chat on WhatsApp
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="#contact" class="btn btn--primary btn--sm nav__cta">Start Your Project</a>
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span>
+        </button>
       </div>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">Web Design & Digital Solutions</div>
-        <h1>We Build Websites That <span>Help Businesses Grow.</span></h1>
-        <p>
-          Your business deserves more than an ordinary website.
-          We create modern, professional and user-friendly websites
-          designed to make a lasting impression.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="#contact">Start Your Project</a>
-          <a class="outline-button" href="#services">Explore Services</a>
+  <main id="main">
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <canvas id="hero-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__bg" aria-hidden="true">
+        <span class="orb orb--blue"></span>
+        <span class="orb orb--purple"></span>
+        <span class="orb orb--gold"></span>
+        <div class="grid-floor"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal"><span class="dot"></span> International Web Design &amp; Digital Development</p>
+          <h1 id="hero-title" class="hero__title">
+            <span class="line"><span>We Build Websites</span></span>
+            <span class="line"><span>That Turn <em class="serif text-gradient">Visitors</em></span></span>
+            <span class="line"><span>Into <em class="serif text-gold-gradient">Customers.</em></span></span>
+          </h1>
+          <p class="hero__text reveal">Helping businesses grow online with stunning websites, powerful digital experiences and professional web solutions.</p>
+          <div class="hero__buttons reveal">
+            <a href="#services" class="btn btn--ghost magnetic">Explore Our Services
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
+            <a href="#contact" class="btn btn--primary magnetic">Start Your Project
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <ul class="hero__badges reveal" aria-label="Highlights">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg> Mobile-first</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-bolt"/></svg> Fast loading</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Worldwide service</li>
+          </ul>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="services">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">What We Do</div>
-        <h2>Digital Solutions For Your Business</h2>
-        <p>
-          From your first website to a complete online refresh,
-          we help bring your business vision to life.
-        </p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <div class="service-icon">✦</div>
-          <h3>Business Website Design</h3>
-          <p>Professional websites that introduce your business,
-            build trust and help customers find you online.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">◈</div>
-          <h3>Landing Page Design</h3>
-          <p>Focused landing pages designed to communicate
-            your offer and encourage customers to take action.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">▣</div>
-          <h3>E-commerce Websites</h3>
-          <p>Online store experiences that help showcase
-            products and make shopping easier for customers.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">↗</div>
-          <h3>Website Redesign</h3>
-          <p>Give an outdated website a fresh, modern look
-            with an improved experience across devices.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">⚙</div>
-          <h3>Website Maintenance</h3>
-          <p>Ongoing website updates and improvements
-            to help keep your online presence in good shape.</p>
-        </article>
-
-        <article class="service-card">
-          <div class="service-icon">⌕</div>
-          <h3>SEO Foundations</h3>
-          <p>Essential on-page SEO improvements to help
-            search engines understand your website.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="container about-grid">
-      <div class="about-copy">
-        <div class="eyebrow">About Jireh Digital</div>
-        <h2>Making Your Online Presence Count.</h2>
-        <p>
-          We believe every business should have the opportunity
-          to present itself professionally online.
-        </p>
-        <p>
-          Jireh Digital focuses on creating clean, modern and
-          responsive websites that put your business and your
-          customers first.
-        </p>
-
-        <div class="benefits">
-          <div class="benefit"><span>✓</span> Modern Design</div>
-          <div class="benefit"><span>✓</span> Mobile Friendly</div>
-          <div class="benefit"><span>✓</span> Clear Communication</div>
-          <div class="benefit"><span>✓</span> Business Focused</div>
+        <!-- 3D floating mockups -->
+        <div class="hero__visual" aria-hidden="true">
+          <div class="scene" id="scene">
+            <div class="screen screen--desktop">
+              <div class="browser-bar"><i></i><i></i><i></i><span>yourbusiness.com</span></div>
+              <div class="screen__body">
+                <div class="mock-nav"><b></b><span></span><span></span><span></span></div>
+                <div class="mock-hero">
+                  <div class="mock-lines"><i class="w80"></i><i class="w60"></i><i class="w40 thin"></i>
+                    <div class="mock-btns"><u></u><u class="alt"></u></div></div>
+                  <div class="mock-img"></div>
+                </div>
+                <div class="mock-cards"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="screen screen--phone">
+              <div class="phone-notch"></div>
+              <div class="screen__body">
+                <div class="mock-img mock-img--tall"></div>
+                <div class="mock-lines"><i class="w80"></i><i class="w60 thin"></i></div>
+                <div class="mock-btns"><u></u></div>
+                <div class="mock-cards mock-cards--stack"><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="screen screen--card glass">
+              <div class="stat-ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.9"/><circle class="arc" cx="18" cy="18" r="15.9"/></svg><span>98</span></div>
+              <div><strong>Performance</strong><small>Optimised build</small></div>
+            </div>
+            <div class="screen screen--chip glass">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              <div><strong>New enquiry</strong><small>"I'd love a new website!"</small></div>
+            </div>
+            <div class="ring ring--1"></div>
+            <div class="ring ring--2"></div>
+          </div>
         </div>
       </div>
 
-      <div class="about-panel">
-        <h3>Your Vision. Our Digital Craft.</h3>
-        <p>
-          Whether you are starting a business or improving an
-          existing one, we aim to make your website work harder
-          for your brand.
-        </p>
-        <br>
-        <p>
-          Let's create an online presence that represents
-          the quality of your business.
-        </p>
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section"><span></span></a>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Business Websites</span><i>✦</i><span>Landing Pages</span><i>✦</i><span>E-commerce</span><i>✦</i><span>Booking Systems</span><i>✦</i><span>Redesigns</span><i>✦</i><span>SEO</span><i>✦</i><span>Maintenance</span><i>✦</i>
+        <span>Business Websites</span><i>✦</i><span>Landing Pages</span><i>✦</i><span>E-commerce</span><i>✦</i><span>Booking Systems</span><i>✦</i><span>Redesigns</span><i>✦</i><span>SEO</span><i>✦</i><span>Maintenance</span><i>✦</i>
       </div>
     </div>
-  </section>
 
-  <section id="process">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">How It Works</div>
-        <h2>A Simple Process From Start To Finish</h2>
-        <p>We keep the process clear so you know what happens
-          at every stage of your project.</p>
-      </div>
-
-      <div class="process-grid">
-        <div class="process-card">
-          <div class="step">STEP 01</div>
-          <h3>Discovery</h3>
-          <p>We learn about your business, goals,
-            audience and website requirements.</p>
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="logo-orb tilt">
+            <div class="logo-orb__glow"></div>
+            <picture>
+              <source srcset="assets/logo.webp" type="image/webp">
+              <img src="assets/logo.png" alt="Jireh Digital logo: a gold and silver JD monogram beneath a crown" width="600" height="600" loading="lazy">
+            </picture>
+          </div>
         </div>
-
-        <div class="process-card">
-          <div class="step">STEP 02</div>
-          <h3>Design & Build</h3>
-          <p>We create your website around your brand
-            and the needs of your customers.</p>
-        </div>
-
-        <div class="process-card">
-          <div class="step">STEP 03</div>
-          <h3>Review & Launch</h3>
-          <p>We review the finished website with you
-            before preparing it for launch.</p>
+        <div class="about__copy">
+          <p class="eyebrow reveal"><span class="dot"></span> About Jireh Digital</p>
+          <h2 id="about-title" class="section-title reveal">Building Digital Experiences <em class="serif text-gold-gradient">That Matter.</em></h2>
+          <p class="lead reveal">Jireh Digital is a digital agency focused on helping businesses establish a powerful online presence. We create modern, professional and engaging websites designed to help businesses attract customers, build trust and grow.</p>
+          <div class="about__pillars">
+            <div class="pillar glass reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-target"/></svg>
+              <h3>Attract</h3><p>Designs that grab attention and get you found.</p>
+            </div>
+            <div class="pillar glass reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg>
+              <h3>Build trust</h3><p>A polished presence customers feel confident in.</p>
+            </div>
+            <div class="pillar glass reveal">
+              <svg class="icon" aria-hidden="true"><use href="#i-trend"/></svg>
+              <h3>Grow</h3><p>Clear paths that turn visitors into enquiries.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta" id="contact">
+    <!-- ========== SERVICES ========== -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span class="dot"></span> Our Services</p>
+          <h2 id="services-title" class="section-title reveal">Everything you need to <em class="serif text-gradient">win online.</em></h2>
+          <p class="section-sub reveal">From your first website to ongoing growth, we handle the design, build and care — so you can focus on running your business.</p>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg></div>
+            <span class="service-card__num">01</span>
+            <h3>Business Website Design</h3>
+            <p>Custom, professional websites that present your brand beautifully and make it easy for customers to contact you.</p>
+            <a href="#contact" class="service-card__link" data-service="Business Website Design">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg></div>
+            <span class="service-card__num">02</span>
+            <h3>Landing Page Development</h3>
+            <p>High-converting single pages built for campaigns, launches and adverts — focused on one clear action.</p>
+            <a href="#contact" class="service-card__link" data-service="Landing Page Development">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-cart"/></svg></div>
+            <span class="service-card__num">03</span>
+            <h3>E-commerce Website Development</h3>
+            <p>Online stores with smooth product browsing, secure checkout and easy management of your products.</p>
+            <a href="#contact" class="service-card__link" data-service="E-commerce Website Development">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></div>
+            <span class="service-card__num">04</span>
+            <h3>Online Booking Systems</h3>
+            <p>Let customers book appointments and services 24/7, with fewer calls and fewer missed opportunities.</p>
+            <a href="#contact" class="service-card__link" data-service="Online Booking Systems">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-refresh"/></svg></div>
+            <span class="service-card__num">05</span>
+            <h3>Website Redesign</h3>
+            <p>Transform an outdated site into a modern, fast, mobile-friendly experience that reflects your business today.</p>
+            <a href="#contact" class="service-card__link" data-service="Website Redesign">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div>
+            <span class="service-card__num">06</span>
+            <h3>Search Engine Optimisation (SEO)</h3>
+            <p>Technical and on-page optimisation that helps the right customers find your business on Google.</p>
+            <a href="#contact" class="service-card__link" data-service="Search Engine Optimisation (SEO)">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card glass reveal tilt">
+            <div class="service-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-tool"/></svg></div>
+            <span class="service-card__num">07</span>
+            <h3>Website Maintenance</h3>
+            <p>Updates, backups, security checks and content changes — your website stays fast, secure and current.</p>
+            <a href="#contact" class="service-card__link" data-service="Website Maintenance">Enquire <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </article>
+          <article class="service-card service-card--cta reveal">
+            <h3>Not sure what you need?</h3>
+            <p>Tell us about your business and we'll recommend the right solution.</p>
+            <a href="https://wa.me/27704416035?text=Hi%20Jireh%20Digital%2C%20I%27d%20like%20some%20advice%20on%20a%20website%20for%20my%20business." target="_blank" rel="noopener" class="btn btn--whatsapp">
+              <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Ask on WhatsApp
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== OUR WORK ========== -->
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span class="dot"></span> Our Work</p>
+          <h2 id="work-title" class="section-title reveal">Designs crafted for <em class="serif text-gold-gradient">real industries.</em></h2>
+          <p class="section-sub reveal">A selection of demonstration concepts showing the style and quality we bring to every project. Client projects will be showcased here soon.</p>
+        </header>
+
+        <div class="work__filters reveal" role="group" aria-label="Filter demonstration projects">
+          <button class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="chip" data-filter="beauty" aria-pressed="false">Beauty &amp; Grooming</button>
+          <button class="chip" data-filter="food" aria-pressed="false">Food</button>
+          <button class="chip" data-filter="retail" aria-pressed="false">Retail</button>
+          <button class="chip" data-filter="trades" aria-pressed="false">Trades</button>
+        </div>
+
+        <div class="work__grid">
+          <!-- Hair salon -->
+          <article class="project reveal" data-cat="beauty">
+            <div class="project__frame tilt">
+              <span class="demo-badge">Demo Concept</span>
+              <div class="browser-bar"><i></i><i></i><i></i><span>luxe-hair-studio.demo</span></div>
+              <div class="demo demo--salon">
+                <div class="demo__nav"><b>LUXE<span>hair</span></b><nav><i></i><i></i><i></i></nav></div>
+                <div class="demo__hero">
+                  <small>Hair · Colour · Care</small>
+                  <h4>Hair that turns heads.</h4>
+                  <span class="demo__btn">Book an appointment</span>
+                </div>
+                <div class="demo__strip"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3>Hair Salon</h3>
+              <p>Elegant booking-led website with services, pricing and gallery.</p>
+              <ul class="tags"><li>Booking</li><li>Gallery</li><li>Mobile-first</li></ul>
+            </div>
+          </article>
+
+          <!-- Restaurant -->
+          <article class="project reveal" data-cat="food">
+            <div class="project__frame tilt">
+              <span class="demo-badge">Demo Concept</span>
+              <div class="browser-bar"><i></i><i></i><i></i><span>ember-and-oak.demo</span></div>
+              <div class="demo demo--restaurant">
+                <div class="demo__nav"><b>Ember &amp; Oak</b><nav><i></i><i></i><i></i></nav></div>
+                <div class="demo__hero">
+                  <small>Wood-fired kitchen</small>
+                  <h4>Fire. Flavour. Together.</h4>
+                  <span class="demo__btn">Reserve a table</span>
+                </div>
+                <div class="demo__menu"><span>Starters</span><span>Mains</span><span>Desserts</span></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3>Restaurant</h3>
+              <p>Atmospheric menu-first design with table reservations.</p>
+              <ul class="tags"><li>Menu</li><li>Reservations</li><li>Maps</li></ul>
+            </div>
+          </article>
+
+          <!-- Electrical -->
+          <article class="project reveal" data-cat="trades">
+            <div class="project__frame tilt">
+              <span class="demo-badge">Demo Concept</span>
+              <div class="browser-bar"><i></i><i></i><i></i><span>voltline-electrical.demo</span></div>
+              <div class="demo demo--electric">
+                <div class="demo__nav"><b>⚡ VOLTLINE</b><nav><i></i><i></i><i></i></nav></div>
+                <div class="demo__hero">
+                  <small>Certified electricians</small>
+                  <h4>Powering homes &amp; business.</h4>
+                  <span class="demo__btn">Request a quote</span>
+                </div>
+                <div class="demo__badges"><span>24/7 Callouts</span><span>Compliance</span><span>Solar</span></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3>Electrical Company</h3>
+              <p>Trust-building trade site with quote requests and service areas.</p>
+              <ul class="tags"><li>Quote form</li><li>Services</li><li>Local SEO</li></ul>
+            </div>
+          </article>
+
+          <!-- Clothing -->
+          <article class="project reveal" data-cat="retail">
+            <div class="project__frame tilt">
+              <span class="demo-badge">Demo Concept</span>
+              <div class="browser-bar"><i></i><i></i><i></i><span>maison-noir.demo</span></div>
+              <div class="demo demo--fashion">
+                <div class="demo__nav"><b>MAISON NOIR</b><nav><i></i><i></i><i></i></nav></div>
+                <div class="demo__hero">
+                  <small>New Season</small>
+                  <h4>Wear the moment.</h4>
+                  <span class="demo__btn">Shop collection</span>
+                </div>
+                <div class="demo__products"><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3>Clothing Store</h3>
+              <p>Editorial e-commerce experience with collections and checkout.</p>
+              <ul class="tags"><li>E-commerce</li><li>Collections</li><li>Checkout</li></ul>
+            </div>
+          </article>
+
+          <!-- Barbershop -->
+          <article class="project reveal" data-cat="beauty">
+            <div class="project__frame tilt">
+              <span class="demo-badge">Demo Concept</span>
+              <div class="browser-bar"><i></i><i></i><i></i><span>kings-cut.demo</span></div>
+              <div class="demo demo--barber">
+                <div class="demo__nav"><b>KING'S CUT</b><nav><i></i><i></i><i></i></nav></div>
+                <div class="demo__hero">
+                  <small>Est. barbershop</small>
+                  <h4>Sharp cuts. Clean fades.</h4>
+                  <span class="demo__btn">Book your chair</span>
+                </div>
+                <div class="demo__price"><span>Fade<b>·····</b></span><span>Beard<b>·····</b></span></div>
+              </div>
+            </div>
+            <div class="project__info">
+              <h3>Barbershop</h3>
+              <p>Bold, masculine brand site with price list and online booking.</p>
+              <ul class="tags"><li>Booking</li><li>Price list</li><li>Branding</li></ul>
+            </div>
+          </article>
+
+          <!-- Your project -->
+          <article class="project project--yours reveal" data-cat="all">
+            <a href="#contact" class="project__frame project__frame--empty">
+              <span class="plus">+</span>
+              <strong>Your business could be next</strong>
+              <small>Let's design something remarkable together.</small>
+            </a>
+          </article>
+        </div>
+        <p class="work__note reveal">All projects shown are demonstration concepts created by Jireh Digital to illustrate our design approach. They do not represent real client businesses.</p>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE ========== -->
+    <section class="section why" id="why" aria-labelledby="why-title">
+      <div class="container why__grid">
+        <div class="why__intro">
+          <p class="eyebrow reveal"><span class="dot"></span> Why Jireh Digital</p>
+          <h2 id="why-title" class="section-title reveal">Why choose <em class="serif text-gold-gradient">Jireh Digital?</em></h2>
+          <p class="section-sub reveal">We combine premium design with practical business thinking — every decision is made to help your website work harder for you.</p>
+          <a href="#contact" class="btn btn--primary reveal magnetic">Start Your Project <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+        <ul class="why__list">
+          <li class="why-item glass reveal"><span class="why-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-sparkle"/></svg></span><div><h3>Modern &amp; professional designs</h3><p>Contemporary, premium layouts that make your business look its best.</p></div></li>
+          <li class="why-item glass reveal"><span class="why-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><h3>Mobile-friendly websites</h3><p>Flawless on Android phones, iPhones, tablets and desktops.</p></div></li>
+          <li class="why-item glass reveal"><span class="why-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-pointer"/></svg></span><div><h3>User-friendly experiences</h3><p>Clear navigation so visitors find what they need, fast.</p></div></li>
+          <li class="why-item glass reveal"><span class="why-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg></span><div><h3>Business-focused solutions</h3><p>Built around your goals: more enquiries, bookings and sales.</p></div></li>
+          <li class="why-item glass reveal"><span class="why-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span><div><h3>Reliable communication</h3><p>Clear updates at every stage — you're never left guessing.</p></div></li>
+          <li class="why-item glass reveal"><span class="why-item__icon"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg></span><div><h3>International service</h3><p>We work with businesses anywhere in the world, fully online.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== PROCESS ========== -->
+    <section class="section process" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow reveal"><span class="dot"></span> Our Process</p>
+          <h2 id="process-title" class="section-title reveal">From idea to launch in <em class="serif text-gradient">four steps.</em></h2>
+        </header>
+        <ol class="process__steps">
+          <li class="process__line" aria-hidden="true"><span class="process__fill"></span></li>
+          <li class="step reveal">
+            <div class="step__num"><span>01</span></div>
+            <div class="step__body glass">
+              <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+              <h3>Discovery</h3>
+              <p>We understand your business, your customers and your goals.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step__num"><span>02</span></div>
+            <div class="step__body glass">
+              <svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg>
+              <h3>Design</h3>
+              <p>We create a website concept tailored to your brand for your review.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step__num"><span>03</span></div>
+            <div class="step__body glass">
+              <svg class="icon" aria-hidden="true"><use href="#i-code"/></svg>
+              <h3>Development</h3>
+              <p>We build, test and refine your website until it's just right.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step__num"><span>04</span></div>
+            <div class="step__body glass">
+              <svg class="icon" aria-hidden="true"><use href="#i-rocket"/></svg>
+              <h3>Launch</h3>
+              <p>We publish your finished website and make sure it's ready to perform.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="eyebrow reveal"><span class="dot"></span> Contact</p>
+          <h2 id="contact-title" class="section-title reveal">Let's Build Something <em class="serif text-gold-gradient">Great Together.</em></h2>
+          <p class="lead reveal">Ready to take your business online? Get in touch with Jireh Digital and let's discuss your next project.</p>
+
+          <a href="https://wa.me/27704416035?text=Hi%20Jireh%20Digital%2C%20I%27d%20like%20to%20discuss%20a%20website%20project." target="_blank" rel="noopener" class="wa-card reveal">
+            <span class="wa-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+            <span class="wa-card__text">
+              <small>Chat with us on WhatsApp</small>
+              <strong>+27 70 441 6035</strong>
+            </span>
+            <svg class="icon wa-card__arrow" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+
+          <ul class="contact__meta reveal">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg> Serving clients worldwide</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Fast, friendly replies</li>
+          </ul>
+        </div>
+
+        <form class="contact__form glass reveal" name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+          <h3 class="form__title">Tell us about your project</h3>
+          <div class="form__row">
+            <div class="field">
+              <input type="text" id="name" name="name" placeholder=" " autocomplete="name" required>
+              <label for="name">Your name *</label>
+              <span class="field__error" role="alert"></span>
+            </div>
+            <div class="field">
+              <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required>
+              <label for="email">Email address *</label>
+              <span class="field__error" role="alert"></span>
+            </div>
+          </div>
+          <div class="field">
+            <input type="text" id="business" name="business" placeholder=" " autocomplete="organization">
+            <label for="business">Business name</label>
+          </div>
+          <div class="field field--select">
+            <select id="service" name="service" required>
+              <option value="" disabled selected hidden></option>
+              <option>Business Website Design</option>
+              <option>Landing Page Development</option>
+              <option>E-commerce Website Development</option>
+              <option>Online Booking Systems</option>
+              <option>Website Redesign</option>
+              <option>Search Engine Optimisation (SEO)</option>
+              <option>Website Maintenance</option>
+              <option>Not sure yet</option>
+            </select>
+            <label for="service">Service required *</label>
+            <svg class="icon field__chev" aria-hidden="true"><use href="#i-chevron"/></svg>
+            <span class="field__error" role="alert"></span>
+          </div>
+          <div class="field">
+            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="message">Project description *</label>
+            <span class="field__error" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block magnetic">
+            <span class="btn__label">Send Project Enquiry</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-send"/></svg>
+          </button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+          <p class="form__alt">Prefer chatting? <a href="https://wa.me/27704416035" target="_blank" rel="noopener">Message us on WhatsApp</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
     <div class="container">
-      <div class="eyebrow">Let's Work Together</div>
-      <h2>Ready To Build Your Online Presence?</h2>
-      <p>
-        Tell us about your business and what you want
-        your website to achieve. Let's discuss your project.
-      </p>
-      <a class="button"
-         href="https://wa.me/27704416035?text=Hello%20Jireh%20Digital%2C%20I%27m%20interested%20in%20your%20website%20design%20services."
-         target="_blank" rel="noopener">
-        Chat With Us On WhatsApp
-      </a>
-      <p style="margin-top:20px;">
-        WhatsApp: +27 70 441 6035
-      </p>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container">
-      <div class="section-heading">
-        <div class="eyebrow">Questions & Answers</div>
-        <h2>Frequently Asked Questions</h2>
+      <div class="footer__cta reveal">
+        <h2>Ready to turn visitors into <em class="serif text-gold-gradient">customers?</em></h2>
+        <a href="https://wa.me/27704416035" target="_blank" rel="noopener" class="btn btn--whatsapp magnetic">
+          <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> Chat on WhatsApp
+        </a>
       </div>
-
-      <div class="faq-list">
-        <details>
-          <summary>How do I get started?</summary>
-          <p>Contact us on WhatsApp and tell us about your
-            business and the website you have in mind.</p>
-        </details>
-
-        <details>
-          <summary>Can you work with businesses in the UK?</summary>
-          <p>Yes. We can communicate and work remotely
-            with businesses in the UK and other locations.</p>
-        </details>
-
-        <details>
-          <summary>How much does a website cost?</summary>
-          <p>Pricing depends on the size and requirements
-            of your project. Contact us for a discussion
-            and a tailored quotation.</p>
-        </details>
-
-        <details>
-          <summary>Will my website work on mobile phones?</summary>
-          <p>Yes. Our website layouts are designed to
-            adapt to mobile phones, tablets and desktops.</p>
-        </details>
-
-        <details>
-          <summary>How long does a website take to build?</summary>
-          <p>Timelines depend on the project's size,
-            features and how quickly content and feedback
-            are provided.</p>
-        </details>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#home" class="brand" aria-label="Jireh Digital home">
+            <img src="assets/favicon-192.png" alt="" width="44" height="44" class="brand__mark" loading="lazy">
+            <span class="brand__text">JIREH <span class="text-gold">DIGITAL</span></span>
+          </a>
+          <p>We Build Websites That Turn Visitors Into Customers.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer__heading">Navigate</h3>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer__heading">Get in touch</h3>
+          <ul class="footer__links">
+            <li><a href="https://wa.me/27704416035" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg> +27 70 441 6035</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year">2026</span> Jireh Digital. All rights reserved.</p>
+        <a href="#top" class="to-top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
       </div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="container">
-    <div class="footer-content">
-      <div>
-        <a class="logo" href="#home">JIREH <span>DIGITAL.</span></a>
-        <p>Building better digital experiences for businesses.</p>
-      </div>
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/27704416035" target="_blank" rel="noopener" class="wa-float" aria-label="Chat with Jireh Digital on WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-float__tip">Chat with us</span>
+  </a>
 
-      <div>
-        <strong>Explore</strong>
-        <p><a href="#services">Our Services</a></p>
-        <p><a href="#about">About Us</a></p>
-        <p><a href="#contact">Contact</a></p>
-      </div>
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.82 9.82 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.29A11.81 11.81 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.41"/></symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M6 7h6M6 10h9"/></g></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></g></symbol>
+      <symbol id="i-cart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></g></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></g></symbol>
+      <symbol id="i-refresh" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></g></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></g></symbol>
+      <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></g></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></g></symbol>
+      <symbol id="i-trend" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></g></symbol>
+      <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></g></symbol>
+      <symbol id="i-pointer" viewBox="0 0 24 24"><path d="M5 3l14 7-6 2-2 6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2M2 13h20"/></g></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="i-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></g></symbol>
+      <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/><circle cx="11" cy="11" r="2"/></g></symbol>
+      <symbol id="i-code" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></g></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </defs>
+  </svg>
 
-      <div>
-        <strong>Get In Touch</strong>
-        <p>
-          <a href="https://wa.me/27704416035" target="_blank"
-             rel="noopener">+27 70 441 6035</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="copyright">
-      © 2026 Jireh Digital. All rights reserved.
-    </div>
-  </div>
-</footer>
-
-<a class="whatsapp-float"
-   href="https://wa.me/27704416035?text=Hello%20Jireh%20Digital"
-   target="_blank" rel="noopener"
-   aria-label="Contact Jireh Digital on WhatsApp">
-  WhatsApp
-</a>
-
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/hero3d.js"></script>
 </body>
 </html>
